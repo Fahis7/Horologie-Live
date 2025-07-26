@@ -20,7 +20,7 @@ import ManageUsers from "./admin/ManageUsers";
 import ManageProducts from "./admin/ManageProducts";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import OrdersPage from "./nonAuth/ordersPage";
+import OrdersPage from "./nonAuth/OrdersPage";
 function App() {
   return (
     <>
