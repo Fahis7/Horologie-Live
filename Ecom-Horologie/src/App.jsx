@@ -12,7 +12,6 @@ import Wishlist from "./nonAuth/WishList";
 import PaymentPage from "./nonAuth/PaymentPage";
 import ErrorResponse from "./nonAuth/ErrorResponse";
 import Confirmation from "./nonAuth/Confirmation";
-import OrdersPage from "./nonAuth/ordersPage";
 import CertificatePage from "./nonAuth/CertificatePage";
 import AdminRoute from "./admin/AdminRoute";
 import Dashboard from "./admin/Dashboard";
@@ -21,7 +20,7 @@ import ManageUsers from "./admin/ManageUsers";
 import ManageProducts from "./admin/ManageProducts";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import OrdersPage from "./nonAuth/ordersPage";
 function App() {
   return (
     <>
