@@ -18,7 +18,7 @@ const Wishlist = () => {
   const handleRemove = async (productId) => {
     const updatedWishlist = user.wishlist.filter((item) => item.id !== productId);
     try {
-      await axios.patch(`http://localhost:5000/users/${user.id}`, {
+      await axios.patch(`https://horologie-live-2.onrender.com/users/${user.id}`, {
         wishlist: updatedWishlist,
       });
       setUser({ ...user, wishlist: updatedWishlist });

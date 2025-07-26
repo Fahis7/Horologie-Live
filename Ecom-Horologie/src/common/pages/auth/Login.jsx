@@ -33,7 +33,7 @@ function Login() {
   const onSubmit = async (values, { setSubmitting }) => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/users?email=${values.email}`
+        `https://horologie-live-2.onrender.com/users?email=${values.email}`
       );
       const user = res.data[0];
 

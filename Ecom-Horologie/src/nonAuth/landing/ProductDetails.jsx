@@ -34,7 +34,7 @@ const ProductDetails = () => {
     }
 
     try {
-      const res = await axios.patch(`http://localhost:5000/users/${user.id}`, {
+      const res = await axios.patch(`https://horologie-live-2.onrender.com/users/${user.id}`, {
         cart: updatedCart,
       });
 
@@ -67,7 +67,7 @@ const ProductDetails = () => {
     const updatedWishlist = [...(user.wishlist || []), product];
 
     try {
-      const res = await axios.patch(`http://localhost:5000/users/${user.id}`, {
+      const res = await axios.patch(`https://horologie-live-2.onrender.com/users/${user.id}`, {
         wishlist: updatedWishlist,
       });
 

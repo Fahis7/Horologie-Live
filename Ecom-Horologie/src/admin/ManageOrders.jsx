@@ -19,7 +19,7 @@ const ManageOrders = () => {
   const fetchUsers = useCallback(async () => {
     try {
       setIsLoading(true);
-      const res = await axios.get("http://localhost:5000/users");
+      const res = await axios.get("https://horologie-live-2.onrender.com/users");
       setUsers(res.data);
 
       // Calculate statistics
@@ -67,7 +67,7 @@ const ManageOrders = () => {
 
       const updatedUser = updatedUsers.find((u) => u.id === selectedUserId);
       await axios.put(
-        `http://localhost:5000/users/${selectedUserId}`,
+        `https://horologie-live-2.onrender.com/users/${selectedUserId}`,
         updatedUser
       );
 

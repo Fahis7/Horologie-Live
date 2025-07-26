@@ -33,7 +33,7 @@ const ManageProducts = () => {
   const fetchProducts = async () => {
     try {
       setIsLoading(true);
-      const res = await axios.get("http://localhost:5000/products");
+      const res = await axios.get("https://horologie-live-2.onrender.com/products");
       setProducts(res.data);
       setFiltered(res.data);
     } catch (err) {
@@ -166,10 +166,10 @@ const ManageProducts = () => {
     e.preventDefault();
     try {
       if (editingProduct) {
-        await axios.put(`http://localhost:5000/products/${editingProduct.id}`, formData);
+        await axios.put(`https://horologie-live-2.onrender.com/products/${editingProduct.id}`, formData);
         toast.success("Product updated successfully");
       } else {
-        await axios.post("http://localhost:5000/products", {
+        await axios.post("https://horologie-live-2.onrender.com/products", {
           ...formData,
           id: `prod-${Date.now()}` // Generate unique ID
         });
@@ -186,7 +186,7 @@ const ManageProducts = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this product?")) return;
     try {
-      await axios.delete(`http://localhost:5000/products/${id}`);
+      await axios.delete(`https://horologie-live-2.onrender.com/products/${id}`);
       fetchProducts();
       toast.success("Product deleted successfully");
     } catch (err) {

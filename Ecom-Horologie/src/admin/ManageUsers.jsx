@@ -17,7 +17,7 @@ const ManageUsers = () => {
   const fetchUsers = useCallback(async () => {
     try {
       setIsLoading(true);
-      const res = await axios.get("http://localhost:5000/users");
+      const res = await axios.get("https://horologie-live-2.onrender.com/users");
       setUsers(res.data);
       
       // Calculate statistics
@@ -49,7 +49,7 @@ const ManageUsers = () => {
 
   const toggleBlock = async (user) => {
     try {
-      await axios.patch(`http://localhost:5000/users/${user.id}`, {
+      await axios.patch(`https://horologie-live-2.onrender.com/users/${user.id}`, {
         isBlock: !user.isBlock,
       });
       // Optimistically update the UI
@@ -65,7 +65,7 @@ const ManageUsers = () => {
 
   const changeRole = async (user, newRole) => {
     try {
-      await axios.patch(`http://localhost:5000/users/${user.id}`, {
+      await axios.patch(`https://horologie-live-2.onrender.com/users/${user.id}`, {
         role: newRole,
       });
       // Optimistically update the UI

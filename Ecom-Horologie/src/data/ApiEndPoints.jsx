@@ -1,2 +1,2 @@
-export const ProductsApi="http://localhost:5000/products"
-export const UsersApi="http://localhost:5000/users"
+export const ProductsApi="https://horologie-live-2.onrender.com/products"
+export const UsersApi="https://horologie-live-2.onrender.com/users"

@@ -20,7 +20,7 @@ function Cart() {
     const fetchUser = async () => {
       if (!user?.id) return;
       try {
-        const res = await axios.get(`http://localhost:5000/users/${user.id}`);
+        const res = await axios.get(`https://horologie-live-2.onrender.com/users/${user.id}`);
         setUser(res.data);
         setLoading(false);
       } catch (error) {
@@ -33,7 +33,7 @@ function Cart() {
 
   const updateCartInDB = async (updatedCart) => {
     try {
-      const res = await axios.patch(`http://localhost:5000/users/${user.id}`, {
+      const res = await axios.patch(`https://horologie-live-2.onrender.com/users/${user.id}`, {
         cart: updatedCart,
       });
       if (res.status === 200) {

@@ -67,7 +67,7 @@ const PaymentPage = () => {
     try {
       // Fetch latest user data to get existing orders
       const { data: userData } = await axios.get(
-        `http://localhost:5000/users/${user.id}`
+        `https://horologie-live-2.onrender.com/users/${user.id}`
       );
 
       const existingOrders = userData.orders || [];
@@ -100,12 +100,12 @@ const PaymentPage = () => {
       const updatedOrders = [...existingOrders, newOrder];
 
       // Update user's orders in the server
-      await axios.patch(`http://localhost:5000/users/${user.id}`, {
+      await axios.patch(`https://horologie-live-2.onrender.com/users/${user.id}`, {
         orders: updatedOrders,
       });
 
       // Clear the cart after successful order placement
-      await axios.patch(`http://localhost:5000/users/${user.id}`, {
+      await axios.patch(`https://horologie-live-2.onrender.com/users/${user.id}`, {
         cart: [],
       });
 

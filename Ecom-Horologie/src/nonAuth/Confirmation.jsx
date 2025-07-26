@@ -66,7 +66,7 @@ const Confirmation = () => {
   const clearCart = async () => {
     try {
       // Clear cart in db.json
-      await axios.patch(`http://localhost:5000/users/${user.id}`, { cart: [] });
+      await axios.patch(`https://horologie-live-2.onrender.com/users/${user.id}`, { cart: [] });
       setCartCount(0);
       // Clear local storage if you're using it
     } catch (error) {
@@ -78,7 +78,7 @@ const Confirmation = () => {
   useEffect(() => {
     const fetchOrderSum = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/users/${user.id}`);
+        const response = await fetch(`https://horologie-live-2.onrender.com/users/${user.id}`);
         const data = await response.json();
         const orders = data.cart || [];
 

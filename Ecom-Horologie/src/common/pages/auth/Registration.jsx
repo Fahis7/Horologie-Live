@@ -39,14 +39,14 @@ function Register() {
   const onSubmit = async (values, { setSubmitting }) => {
     try {
       const existing = await axios.get(
-        `http://localhost:5000/users?email=${values.email}`
+        `https://horologie-live-2.onrender.com/users?email=${values.email}`
       );
       if (existing.data.length > 0) {
         alert("User already exists!");
         return;
       }
 
-      await axios.post("http://localhost:5000/users", values);
+      await axios.post("https://horologie-live-2.onrender.com/users", values);
       alert("Account created successfully!");
       navigate("/login");
     } catch (err) {

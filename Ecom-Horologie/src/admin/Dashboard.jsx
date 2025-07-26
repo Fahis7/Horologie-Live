@@ -34,8 +34,8 @@ const Dashboard = () => {
     const fetchData = async () => {
       try {
         const [usersRes, productsRes] = await Promise.all([
-          axios.get("http://localhost:5000/users"),
-          axios.get("http://localhost:5000/products"),
+          axios.get("https://horologie-live-2.onrender.com/users"),
+          axios.get("https://horologie-live-2.onrender.com/products"),
         ]);
 
         const users = usersRes.data;

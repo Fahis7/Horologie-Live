@@ -20,7 +20,7 @@ const OrdersPage = () => {
         setIsLoading(true);
         await new Promise(resolve => setTimeout(resolve, 500));
         const response = await axios.get(
-          `http://localhost:5000/users/${user.id}`
+          `https://horologie-live-2.onrender.com/users/${user.id}`
         );
         setOrders(response.data.orders || []);
       } catch (error) {
