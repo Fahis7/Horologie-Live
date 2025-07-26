@@ -45,7 +45,7 @@ function App() {
         {/* Routes with Navbar/Footer wrapped in MainLayout */}
         <Route element={<MainLayout />}>
           <Route path="*" element={<ErrorResponse />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} /> 
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
